@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2129822091154993380}
   - component: {fileID: 5976263549221548699}
   - component: {fileID: 2863848976000777979}
+  - component: {fileID: -7649205635465868366}
   m_Layer: 0
   m_Name: Block_normal
   m_TagString: TowerBlock
@@ -113,3 +114,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0444444, y: 1.2777778, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7649205635465868366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316286260623044871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab79f17e8a95a5469bf54e0f6331369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block
