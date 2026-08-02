@@ -20,7 +20,7 @@ public class ObjectDetector : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext context)
     {
-        // 블럭을 클릭(터치) 했을 때만 동작하도록 처리
+        // 블록을 클릭(터치) 했을 때만 동작하도록 처리
         if ( !context.performed )
             return;
         if (!context.ReadValueAsButton())

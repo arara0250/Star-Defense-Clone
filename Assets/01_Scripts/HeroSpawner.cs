@@ -6,7 +6,7 @@ public class HeroSpawner : MonoBehaviour
 
     public void TrySpawnHero(Transform blockTransform)
     {
-        // 선택한 위치의 블럭에 영웅 소환
+        // 선택한 위치의 블록에 영웅 소환
         Instantiate(heroPrefab, blockTransform.position, Quaternion.identity);
     }
 }
