@@ -3182,6 +3182,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2129822091154993380, guid: ba9fa94c0f39cc44aa302f9eac727264, type: 3}
   m_PrefabInstance: {fileID: 1851930087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1872442800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872442801}
+  - component: {fileID: 1872442802}
+  m_Layer: 0
+  m_Name: HeroSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872442801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872442800}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872442802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872442800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a7c7d6321c7bd4c996c69a1f7e658f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeroSpawner
+  heroPrefab: {fileID: 4617810454959644312, guid: 5c7ca2ec16e602b408f028ace9e3809a, type: 3}
 --- !u!1001 &1913485874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3530,3 +3575,4 @@ SceneRoots:
   - {fileID: 2010880373}
   - {fileID: 1640731933}
   - {fileID: 1367423043}
+  - {fileID: 1872442801}
