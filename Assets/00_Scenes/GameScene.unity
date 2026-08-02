@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 247817896}
   - component: {fileID: 247817895}
   m_Layer: 0
-  m_Name: Block Tilemap
+  m_Name: Tilemap_TowerBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 1305438276}
   - component: {fileID: 1305438275}
   m_Layer: 0
-  m_Name: Waypoints
+  m_Name: Tilemap_Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
