@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2863848976000777979}
   m_Layer: 0
   m_Name: Tile_block_normal
-  m_TagString: Untagged
+  m_TagString: TowerBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
