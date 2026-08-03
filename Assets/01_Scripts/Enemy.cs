@@ -9,8 +9,12 @@ public class Enemy : MonoBehaviour
     private int         wayPointCount;
     private int         currentIndex = 0;   // 현재 이동중인 웨이포인트의 인덱스
 
-    public void Setup(Transform[] wayPoints)
+    private EnemySpawner    _enemySpawner;
+
+    public void Setup(EnemySpawner enemySpawner, Transform[] wayPoints)
     {
+        _enemySpawner = enemySpawner;
+        
         // 적 이동 경로(Waypoint) 정보 초기 세팅
         wayPointCount = wayPoints.Length;
         _wayPoints = new Transform[wayPointCount];
@@ -36,7 +40,7 @@ public class Enemy : MonoBehaviour
             if ( currentIndex < wayPointCount - 1 )
                 currentIndex++;
             else
-                Destroy(gameObject);
+                OnDie();
         }
     }
 
@@ -53,5 +57,11 @@ public class Enemy : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    // 적의 사망 처리를 담당하는 EnemySpawner 에게 필요한 정보를 전달하는 메소드
+    public void OnDie()
+    {
+        _enemySpawner.DestroyEnemy(this);
     }
 }
