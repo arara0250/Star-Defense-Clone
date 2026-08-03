@@ -4,13 +4,14 @@ public class Projectile : MonoBehaviour
 {
     private ProjectileMovement  p_movement;     // 발사체 이동 제어 컴포넌트
     private Transform           _target;        // 발사체가 향해가는 공격 대상
-
-    public void Setup(Transform target)
+    private float               _damage;        // 발사체 공격력 = 영웅 공격력
+    public void Setup(Transform target, float damage)
     {
         p_movement = GetComponent<ProjectileMovement>();
 
-        // 영웅으로부터 전달받은 공격 대상 저장
+        // 영웅으로부터 전달받은 정보 저장
         _target = target;
+        _damage = damage;
     }
 
     private void Update()
@@ -38,9 +39,8 @@ public class Projectile : MonoBehaviour
         if (collision.transform != _target)
             return;
 
-        // 적 공격
-        // TODO : 적 체력 시스템 추가
-        collision.GetComponent<Enemy>().OnDie();
+        // 적 피격 처리 (적 체력 감소)
+        collision.GetComponent<EnemyHP>().TakeDamage(_damage);
         Destroy(gameObject);
     }
 }

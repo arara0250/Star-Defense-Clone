@@ -12,6 +12,7 @@ public class HeroAttack : MonoBehaviour
     [Header("영웅 공격 세팅")]
     [SerializeField] private float      attackRate;             // 영웅의 공격 속도
     [SerializeField] private float      attackRange;            // 영웅의 공격 범위
+    [SerializeField] private float      attackDamage;           // 영웅의 공격력
 
     private EnemySpawner    _enemySpawner;      // 공격할 적 정보 참조용
     private Transform       currentTarget;      // 영웅의 현재 공격 대상
@@ -136,7 +137,7 @@ public class HeroAttack : MonoBehaviour
     {
         var clone = Instantiate(projectilePrefab, projectilePivot.position, Quaternion.identity);
 
-        // 생성한 발사체에 공격 대상 정보 전달
-        clone.GetComponent<Projectile>().Setup(currentTarget);
+        // 생성한 발사체에 공격 대상 및 영웅 공격력 정보 전달
+        clone.GetComponent<Projectile>().Setup(currentTarget, attackDamage);
     }
 }
