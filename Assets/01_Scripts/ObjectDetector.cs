@@ -32,7 +32,7 @@ public class ObjectDetector : MonoBehaviour
 
         if ( Physics.Raycast(ray, out var hit, Mathf.Infinity) )
         {
-            if ( hit.transform.gameObject.CompareTag("TowerBlock") )
+            if ( hit.transform.gameObject.CompareTag("HeroBlock") )
             {
                 heroSpawner.TrySpawnHero(hit.transform);
             }
