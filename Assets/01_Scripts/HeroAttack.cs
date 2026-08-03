@@ -17,6 +17,17 @@ public class HeroAttack : MonoBehaviour
     private Transform       currentTarget;      // 영웅의 현재 공격 대상
     private AttackState     currentState;       // 영웅의 현재 공격 상태
 
+    private SpriteRenderer  spriteRenderer;
+    private Animator        animator;
+    private float           projectilePivotX;
+
+    private void Awake()
+    {
+        spriteRenderer      = GetComponentInChildren<SpriteRenderer>();
+        animator            = GetComponentInChildren<Animator>();
+        projectilePivotX    = projectilePivot.localPosition.x;
+    }
+
     public void Setup(EnemySpawner enemySpawner)
     {
         _enemySpawner = enemySpawner;
@@ -33,6 +44,17 @@ public class HeroAttack : MonoBehaviour
         // Step #2. 새로운 상태로 변경
         currentState = newState;
         StartCoroutine(currentState.ToString());
+
+        // Step #3. 공격 상태별 애니메이션 전환
+        switch (currentState)
+        {
+            case AttackState.SearchClosestTarget:
+                animator.SetBool("IsAttacking", false);
+                break;
+            case AttackState.AttackToTarget:
+                animator.SetBool("IsAttacking", true);
+                break;
+        }
     }
 
     private void Update()
@@ -42,9 +64,17 @@ public class HeroAttack : MonoBehaviour
             FlipToTarget();
     }
 
+    // 영웅이 공격 대상을 바라보도록 스프라이트 및 projectilePivot 을 뒤집는 함수
     private void FlipToTarget()
     {
-        // TODO : 영웅 이미지 및 projectilePivot 뒤집는 로직 작성
+        bool isLeft = currentTarget.position.x < transform.position.x;
+
+        spriteRenderer.flipX = isLeft;
+
+        projectilePivot.localPosition = new Vector3(
+            isLeft ? -projectilePivotX : projectilePivotX,
+            projectilePivot.localPosition.y,
+            projectilePivot.localPosition.z);
     }
 
     // 가장 가까이 위치한 적을 찾기 위한 코루틴 함수
