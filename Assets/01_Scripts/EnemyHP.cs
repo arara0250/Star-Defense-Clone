@@ -28,8 +28,8 @@ public class EnemyHP : MonoBehaviour
         currentHP -= damage;
 
         // 중복 호출 방지
-        StopCoroutine(nameof(HitAlphaAnimation));
-        StartCoroutine(nameof(HitAlphaAnimation));
+        StopCoroutine(nameof(FlashHitEffect));
+        StartCoroutine(nameof(FlashHitEffect));
 
         // 체력이 0 이하이면, 적 사망 처리
         if ( currentHP <= 0 )
@@ -40,7 +40,7 @@ public class EnemyHP : MonoBehaviour
     }
 
     // 적이 피격당했을 때, 빨간색으로 깜빡이는 효과 연출 메소드
-    private IEnumerator HitAlphaAnimation()
+    private IEnumerator FlashHitEffect()
     {
         // 기존 색상 저장
         Color originalColor = spriteRenderer.color;
