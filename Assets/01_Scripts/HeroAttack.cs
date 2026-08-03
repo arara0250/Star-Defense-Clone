@@ -134,6 +134,9 @@ public class HeroAttack : MonoBehaviour
 
     private void SpawnProjectile()
     {
-        Instantiate(projectilePrefab, projectilePivot.position, Quaternion.identity);
+        var clone = Instantiate(projectilePrefab, projectilePivot.position, Quaternion.identity);
+
+        // 생성한 발사체에 공격 대상 정보 전달
+        clone.GetComponent<Projectile>().Setup(currentTarget);
     }
 }
