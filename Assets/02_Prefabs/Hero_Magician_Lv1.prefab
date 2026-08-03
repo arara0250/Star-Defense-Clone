@@ -123,6 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462373218004036386}
+  - component: {fileID: 6357444076963737371}
   m_Layer: 0
   m_Name: Hero_Magician_Lv1
   m_TagString: Untagged
@@ -147,6 +148,22 @@ Transform:
   - {fileID: 83805128946894594}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6357444076963737371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617810454959644312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc3ad2f4cf14234fbc021393d50384d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeroAttack
+  projectilePivot: {fileID: 83805128946894594}
+  projectilePrefab: {fileID: 1196743333949893737, guid: 05754595f7fc05744914142fe89407cf, type: 3}
+  attackRate: 0.5
+  attackRange: 2
 --- !u!1 &5789290914707583494
 GameObject:
   m_ObjectHideFlags: 0

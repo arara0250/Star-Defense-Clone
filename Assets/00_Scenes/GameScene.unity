@@ -3434,6 +3434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeroSpawner
   heroPrefab: {fileID: 4617810454959644312, guid: 5c7ca2ec16e602b408f028ace9e3809a, type: 3}
+  enemySpawner: {fileID: 1367423044}
 --- !u!1001 &1913485874
 PrefabInstance:
   m_ObjectHideFlags: 0
