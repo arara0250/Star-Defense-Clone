@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // 적의 체력을 UI 에 그려주는 컴포넌트
-public class EnemyHpViewer : MonoBehaviour
+public class UI_EnemyHP : MonoBehaviour
 {
     private EnemyHP _enemyHP;
     private Slider  hpBar;

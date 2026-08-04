@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // UI(HP바) 가 타겟(적) 을 따라다니도록 제어하는 컴포넌트
-public class UiFollowTarget : MonoBehaviour
+public class UI_FollowTarget : MonoBehaviour
 {
     private Transform       _target;
 

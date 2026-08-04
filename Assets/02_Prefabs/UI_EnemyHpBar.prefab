@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4165601937283083122}
   - component: {fileID: 1234524372044732618}
   m_Layer: 5
-  m_Name: EnemyHpBar
+  m_Name: UI_EnemyHpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
