@@ -84,11 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8832bcaef5e2bee49933c199d09f5ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  playerHP: {fileID: 0}
   hubPivot: {fileID: 745316162511396045}
   timeOffset: 1
   attackRate: 1
-  attackDamage: 1
+  attackDamage: 5
+  goldReward: 1
 --- !u!114 &4380960942870828689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae141988e3b7a874c94e27c1a32923d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHP
-  maxHP: 5
+  maxHP: 10
   currentHP: 0
 --- !u!1 &5832416814674507214
 GameObject:

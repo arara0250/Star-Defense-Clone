@@ -7,12 +7,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform  hubPivot;               // Inspector 뷰에서 추가
     public Transform                    HudPivot => hubPivot;   // 외부 첨조용 프로퍼티
 
-    [Header("적 이동 세팅")]
+    [Header("적 정보 세팅")]
     [SerializeField] private float      timeOffset = 1.0f;      // 1칸 이동하는데 걸리는 시간
-
-    [Header("적 공격 세팅")]
-    [SerializeField] private float attackRate;         // 적의 공격 속도
-    [SerializeField] private float attackDamage;       // 적의 공격력
+    [SerializeField] private float      attackRate;             // 적의 공격 속도
+    [SerializeField] private float      attackDamage;           // 적의 공격력
+    [SerializeField] private int        goldReward;             // 적 처치 시, 얻을 수 있는 골드
 
     private Transform[] _wayPoints;
     private int         wayPointCount;
