@@ -85,6 +85,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4165601937283083122}
   - component: {fileID: 1234524372044732618}
+  - component: {fileID: 8987345153362154074}
+  - component: {fileID: 1995517888708196719}
   m_Layer: 5
   m_Name: UI_EnemyHpBar
   m_TagString: Untagged
@@ -164,6 +166,30 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8987345153362154074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949680090121272546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d49612ef65c5c4aa3232bb2d5eb485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_FollowTarget
+--- !u!114 &1995517888708196719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949680090121272546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48cae3c49009084ea5fea9506d4cb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_EnemyHP
 --- !u!1 &7368316663261415222
 GameObject:
   m_ObjectHideFlags: 0
