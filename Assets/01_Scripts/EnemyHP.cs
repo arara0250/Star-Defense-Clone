@@ -10,6 +10,10 @@ public class EnemyHP : MonoBehaviour
     private Enemy           enemy;              // 적 사망 메소드 호출용
     private SpriteRenderer  spriteRenderer;     // 적 피격 효과 연출용
 
+    // 적 체력 정보 외부 참조용 프로퍼티
+    public float MaxHP => maxHP;
+    public float CurrentHP => currentHP;
+
     private void Awake()
     {
         enemy           = GetComponent<Enemy>();
