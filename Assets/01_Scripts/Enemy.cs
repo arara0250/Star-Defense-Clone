@@ -10,16 +10,22 @@ public class Enemy : MonoBehaviour
     [Header("적 이동 세팅")]
     [SerializeField] private float      timeOffset = 1.0f;      // 1칸 이동하는데 걸리는 시간
 
+    [Header("적 공격 세팅")]
+    [SerializeField] private float attackRate;         // 적의 공격 속도
+    [SerializeField] private float attackDamage;       // 적의 공격력
+
     private Transform[] _wayPoints;
     private int         wayPointCount;
     private int         currentIndex = 0;   // 현재 이동중인 웨이포인트의 인덱스
 
     private EnemySpawner    _enemySpawner;
+    private PlayerHP        playerHP;       // 플레이어의 체력 정보 참조
 
     public void Setup(EnemySpawner enemySpawner, Transform[] wayPoints)
     {
-        _enemySpawner = enemySpawner;
-        
+        _enemySpawner   = enemySpawner;
+        playerHP        = GameManager.Instance.PlayerHP;
+
         // 적 이동 경로(Waypoint) 정보 초기 세팅
         wayPointCount = wayPoints.Length;
         _wayPoints = new Transform[wayPointCount];
@@ -44,8 +50,13 @@ public class Enemy : MonoBehaviour
             // 다음 Waypoint 설정
             if ( currentIndex < wayPointCount - 1 )
                 currentIndex++;
+
+            // 적이 Player 앞에 있는 마지막 Waypoint 에 도착하면 플레이어 공격
             else
-                OnDie();
+            {
+                playerHP.TakeDamage(attackDamage);
+                yield return new WaitForSeconds(attackRate);
+            }
         }
     }
 
