@@ -3,6 +3,7 @@
 
 ---
 # 시연 영상
+[시연_영상_구글_드라이브](https://drive.google.com/file/d/1kRIKnKrmX1N_wn2qn87R25ufKdkLGakb/view?usp=sharing)
 
 ---
 # 과제 구현 사항
