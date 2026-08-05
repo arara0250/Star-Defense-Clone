@@ -2027,6 +2027,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2129822091154993380, guid: ba9fa94c0f39cc44aa302f9eac727264, type: 3}
   m_PrefabInstance: {fileID: 653051361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &662504041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662504043}
+  - component: {fileID: 662504042}
+  m_Layer: 0
+  m_Name: WaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &662504042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662504041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78f2c4e2e3626147b7607c809401ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSystem
+  waves:
+  - waveTime: 5
+    enemyPrefabs:
+    - {fileID: 2613815933366408034, guid: 52a01b20ff3a3f848b164b2e80dc0372, type: 3}
+    bossPrefab: {fileID: 2613815933366408034, guid: 2f4e27dc418f6104d975c015dea7ff24, type: 3}
+  - waveTime: 10
+    enemyPrefabs:
+    - {fileID: 2613815933366408034, guid: 52a01b20ff3a3f848b164b2e80dc0372, type: 3}
+    bossPrefab: {fileID: 2613815933366408034, guid: 2f4e27dc418f6104d975c015dea7ff24, type: 3}
+  - waveTime: 10
+    enemyPrefabs:
+    - {fileID: 2613815933366408034, guid: fbc09166bd414e347b9693d0d17855f8, type: 3}
+    bossPrefab: {fileID: 2613815933366408034, guid: 2f4e27dc418f6104d975c015dea7ff24, type: 3}
+  - waveTime: 15
+    enemyPrefabs:
+    - {fileID: 2613815933366408034, guid: 52a01b20ff3a3f848b164b2e80dc0372, type: 3}
+    - {fileID: 2613815933366408034, guid: fbc09166bd414e347b9693d0d17855f8, type: 3}
+    bossPrefab: {fileID: 2613815933366408034, guid: 2f4e27dc418f6104d975c015dea7ff24, type: 3}
+  enemySpawner: {fileID: 1367423044}
+--- !u!4 &662504043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662504041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772855405
 GameObject:
   m_ObjectHideFlags: 0
