@@ -6,8 +6,11 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private float maxHP;
     [SerializeField] private float currentHP;
 
+    private bool isDie = false;     // 게임 오버 중복 방지 플래그
+
     // 이벤트 변수
     public event Action<float, float>   OnHPChanged;    // 체력바 UI 갱신용
+    public event Action                 OnDeath;        // 게임오버 처리용
 
     // 플레이어 체력 정보 외부 참조용 프로퍼티
     public float MaxHP => maxHP;
@@ -37,6 +40,8 @@ public class PlayerHP : MonoBehaviour
         if (currentHP <= 0)
         {
             // TODO : 체력이 0 이하이면, 게임 오버 처리
+            isDie = true;
+            OnDeath?.Invoke();
         }
     }
 }
