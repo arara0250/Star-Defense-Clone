@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,6 +15,13 @@ public class WaveSystem : MonoBehaviour
     [SerializeField] private EnemySpawner   enemySpawner;   // 적 스폰 메소드 호출을 위해 필요
 
     private int currentWaveIndex = -1;
+
+    // 외부 참조용 프로퍼티
+    public int CurrentWave => currentWaveIndex + 1;
+    public int MaxWave => waves.Length;
+
+    // 다음 웨이브로 진행되었음을 UI_WavePanel 에 알리기 위한 이벤트
+    public event Action OnWaveChanged;
 
     private void OnEnable()
     {
@@ -36,6 +44,8 @@ public class WaveSystem : MonoBehaviour
         {
             currentWaveIndex++;
             enemySpawner.StartWave(waves[currentWaveIndex]);    // 현재 웨이브 정보를 매개변수로 전달
+
+            OnWaveChanged?.Invoke();
         }
     }
 }

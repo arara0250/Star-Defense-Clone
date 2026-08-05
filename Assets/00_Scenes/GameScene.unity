@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 195236241}
   - component: {fileID: 195236243}
   - component: {fileID: 195236242}
+  - component: {fileID: 195236244}
   m_Layer: 5
   m_Name: WavePanel
   m_TagString: Untagged
@@ -568,6 +569,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195236240}
   m_CullTransparentMesh: 1
+--- !u!114 &195236244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195236240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a24ee08b02a0094ca266ab0ba15e2b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_WavePanel
+  waveSystem: {fileID: 662504042}
+  waveText: {fileID: 1758535742}
 --- !u!1 &199521487
 GameObject:
   m_ObjectHideFlags: 0
