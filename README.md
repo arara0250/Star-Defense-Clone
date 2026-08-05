@@ -2,7 +2,10 @@
 - 스파르타 게임 캠프 10기 과제 전형 **(스타 디펜스: 유즈맵 TD 모작)** 을 위한 프로젝트 입니다.
 
 ---
-# 과제 소개
+# 시연 영상
+
+---
+# 과제 구현 사항
 #### 1. [필수] 전투 루프: 적 생성 및 이동, 영웅 공격, 적 체력 감소, 적 사망 처리 (구현 완료 ✅)
 - **적 생성 및 웨이포인트를 따라 이동**
   > [Enemy.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/Enemy.cs)
@@ -36,6 +39,10 @@
 - **영웅 소환 및 승급 시스템**
   1. 빈 블록(타일) 에 새로운 Lv1 영웅 소환 (골드 소모)
   2. Lv1 영웅이 2개 이상 소환되어 있으면, 두 개의 Lv1 영웅을 하나의 Lv2 영웅으로 합치면서 승급 (골드 소모 X)
+     
+        |  Lv1 영웅  |  Lv2 영웅  |
+        | ------------- | ------------- |
+        | <img width="160" height="178" alt="스크린샷 2026-08-06 074036" src="https://github.com/user-attachments/assets/4c9db66c-9a43-4339-8723-90974e8625cc" /> | <img width="160" height="166" alt="image" src="https://github.com/user-attachments/assets/e8aa0266-2485-464e-8373-8fc4b03fa489" /> |
 
      > [Hero.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/Hero.cs)
      <br> [HeroSpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/HeroSpawner.cs)
