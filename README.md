@@ -32,9 +32,12 @@
   - 맵에 스폰된 모든 적 (보스 포함) 을 처치하면, 다음 웨이브로 진행됨
   - 길의 끝에 위치한 플레이어(지휘관) 의 체력을 기반으로 게임오버 / 승리 처리
  
-    |  슬라임 (일반 몬스터)  |  스네이크 (일반 몬스터)  |  고블린 (보스 몬스터)  |
-    | :-------------: | :-------------: | :-------------: |
-    | <img width="114" height="111" alt="스크린샷 2026-08-06 075254" src="https://github.com/user-attachments/assets/bfd04893-c13f-446e-a58e-7afd784654e2" /> | <img width="106" height="98" alt="스크린샷 2026-08-06 075519" src="https://github.com/user-attachments/assets/42663215-3a1b-4472-b20b-5ae83ea212de" /> | <img width="114" height="135" alt="스크린샷 2026-08-06 075341" src="https://github.com/user-attachments/assets/d9e0f10f-601a-4ae1-a11c-ab55dfde8646" /> |
+    |               |  슬라임 (일반 몬스터)  |  스네이크 (일반 몬스터)  |  고블린 (보스 몬스터)  |
+    | :------------: | :--------------------: | :---------------------: | :-------------------: |
+    |   **캐릭터**   | <img width="114" height="111" alt="스크린샷 2026-08-06 075254" src="https://github.com/user-attachments/assets/bfd04893-c13f-446e-a58e-7afd784654e2" /> | <img width="106" height="98" alt="스크린샷 2026-08-06 075519" src="https://github.com/user-attachments/assets/42663215-3a1b-4472-b20b-5ae83ea212de" /> | <img width="114" height="135" alt="스크린샷 2026-08-06 075341" src="https://github.com/user-attachments/assets/d9e0f10f-601a-4ae1-a11c-ab55dfde8646" /> |
+    |    **체력**   | 10 | 30 | 70 |
+    |   **공격력**  | 5 | 7 | 10 |
+    | **획득 골드** | 1 | 1 | 100 |
 
 
     > [WaveSystem.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/WaveSystem.cs)
@@ -47,9 +50,10 @@
   1. 빈 블록(타일) 에 새로운 Lv1 영웅 소환 (골드 소모)
   2. Lv1 영웅이 2개 이상 소환되어 있으면, 두 개의 Lv1 영웅을 하나의 Lv2 영웅으로 합치면서 승급 (골드 소모 X)
      
-        |  Lv1 영웅  |  Lv2 영웅  |
-        | ------------- | ------------- |
-        | <img width="160" height="178" alt="스크린샷 2026-08-06 074036" src="https://github.com/user-attachments/assets/4c9db66c-9a43-4339-8723-90974e8625cc" /> | <img width="160" height="166" alt="image" src="https://github.com/user-attachments/assets/e8aa0266-2485-464e-8373-8fc4b03fa489" /> |
+     |            |  Lv1 영웅  |  Lv2 영웅  |
+     |  :-----:   | :-------------: | :-------------: |
+     | **캐릭터** | <img width="160" height="178" alt="스크린샷 2026-08-06 074036" src="https://github.com/user-attachments/assets/4c9db66c-9a43-4339-8723-90974e8625cc" /> | <img width="160" height="166" alt="image" src="https://github.com/user-attachments/assets/e8aa0266-2485-464e-8373-8fc4b03fa489" /> |
+     | **공격력** | 5 | 10 |
 
      > [Hero.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/Hero.cs)
      <br> [HeroSpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/HeroSpawner.cs)
