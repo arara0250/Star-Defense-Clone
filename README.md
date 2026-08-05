@@ -22,6 +22,13 @@
 
 ---
 #### 3. [필수] 영웅 시스템: 소환 및 승급 (재화소모 포함) (구현 완료 ✅)
+- **영웅 소환 및 승급 시스템**
+  1. 빈 블록(타일) 에 새로운 Lv1 영웅 소환 (골드 소모)
+  2. Lv1 영웅이 2개 이상 소환되어 있으면, 두 개의 Lv1 영웅을 하나의 Lv2 영웅으로 합치면서 승급 (골드 소모 X)
+      > [Block.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Block.cs)
+      <br> [Hero.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/Hero.cs)
+      <br> [HeroSpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/HeroSpawner.cs)
+      <br> [UI_PopupButton.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/UI/UI_PopupButton.cs)
 
 ---
 #### 4. [선택] 영웅 초월, 현상금, 탐사정, 강화, 수리, 타일 버프 (구현 못 함 ❌)
