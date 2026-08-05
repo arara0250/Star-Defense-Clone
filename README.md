@@ -20,6 +20,8 @@
 - **적 사망 처리 (적 정보를 관리하는 리스트 `enemyList` 와의 통신을 위해 `EnemySpawner` 에서 처리)**
   > [EnemySpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/EnemySpawner.cs)
 
+-  $\color{red}{\text{(보스 몬스터의 아군 유닛 공격 기능은 뒤늦게 확인하여 구현하지 못하였습니다.)}}$
+
 ---
 #### 2. [필수] 웨이브: 승리/실패 판정 (지휘관 체력 기반) (구현 완료 ✅)
 - **웨이브 시스템**
@@ -29,6 +31,11 @@
   - `enemyPrefabs` 의 일반 몬스터 프리팹이 여러 개라면, 적을 스폰할 때마다 프리팹을 랜덤하게 선택함
   - 맵에 스폰된 모든 적 (보스 포함) 을 처치하면, 다음 웨이브로 진행됨
   - 길의 끝에 위치한 플레이어(지휘관) 의 체력을 기반으로 게임오버 / 승리 처리
+ 
+    |  슬라임 (일반 몬스터)  |  스네이크 (일반 몬스터)  |  고블린 (보스 몬스터)  |
+    | :-------------: | :-------------: | :-------------: |
+    | <img width="114" height="111" alt="스크린샷 2026-08-06 075254" src="https://github.com/user-attachments/assets/bfd04893-c13f-446e-a58e-7afd784654e2" /> | <img width="106" height="98" alt="스크린샷 2026-08-06 075519" src="https://github.com/user-attachments/assets/42663215-3a1b-4472-b20b-5ae83ea212de" /> | <img width="114" height="135" alt="스크린샷 2026-08-06 075341" src="https://github.com/user-attachments/assets/d9e0f10f-601a-4ae1-a11c-ab55dfde8646" /> |
+
 
     > [WaveSystem.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/WaveSystem.cs)
     <br> [PlayerHP.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Player/PlayerHP.cs)
