@@ -3,7 +3,19 @@
 
 ---
 # 과제 소개
-#### 1. [필수] 전투 루프: 적 생성 및 이동, 영웅 공격, 적 체력 감소, 적 사망처리 (구현 완료 ✅)
+#### 1. [필수] 전투 루프: 적 생성 및 이동, 영웅 공격, 적 체력 감소, 적 사망 처리 (구현 완료 ✅)
+- 적 생성 및 이동
+  > [Enemy.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/Enemy.cs)
+<br> [EnemySpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/EnemySpawner.cs)
+
+- 영웅 공격
+  > [HeroAttack.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Hero/HeroAttack.cs)
+
+- 적 체력 감소
+  > [EnemyHP.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/EnemyHP.cs)
+
+- 적 사망 처리 (적 정보를 관리하는 리스트 `enemyList` 와의 통신을 위해 `EnemySpawner` 에서 처리)
+  > [EnemySpawner.cs](https://github.com/arara0250/Star-Defense-Clone/blob/main/Assets/01_Scripts/Enemy/EnemySpawner.cs)
 
 ---
 #### 2. [필수] 웨이브: 승리/실패 판정 (지휘관 체력 기반) (구현 완료 ✅)
