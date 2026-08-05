@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8832bcaef5e2bee49933c199d09f5ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  hubPivot: {fileID: 745316162511396045}
+  hpBarPivot: {fileID: 745316162511396045}
   timeOffset: 1
   attackRate: 1
   attackDamage: 7
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745316162511396045}
   m_Layer: 0
-  m_Name: HudPivot
+  m_Name: HpBarPivot
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

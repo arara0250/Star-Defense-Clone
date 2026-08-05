@@ -103,7 +103,7 @@ public class EnemySpawner : MonoBehaviour
         hpBar.transform.localScale = Vector3.one;
 
         // 체력바가 따라갈 위치를 Enemy 의 HudPivot 으로 설정
-        hpBar.GetComponent<UI_FollowTarget>().SetTarget(enemy.GetComponent<Enemy>().HudPivot);
+        hpBar.GetComponent<UI_FollowTarget>().SetTarget(enemy.GetComponent<Enemy>().HpBarPivot);
 
         // 적 체력 정보 컴포넌트 전달
         hpBar.GetComponent<UI_EnemyHP>().Setup(enemy.GetComponent<EnemyHP>());

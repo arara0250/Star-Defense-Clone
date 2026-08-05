@@ -4,8 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     [Header("체력바 UI 세팅")]
-    [SerializeField] private Transform  hubPivot;               // Inspector 뷰에서 추가
-    public Transform                    HudPivot => hubPivot;   // 외부 첨조용 프로퍼티
+    [SerializeField] private Transform  hpBarPivot;               // Inspector 뷰에서 추가
+    public Transform                    HpBarPivot => hpBarPivot;   // 외부 참조용 프로퍼티
 
     [Header("적 정보 세팅")]
     [SerializeField] private float      timeOffset = 1.0f;      // 1칸 이동하는데 걸리는 시간
