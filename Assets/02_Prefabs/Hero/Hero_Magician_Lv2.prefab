@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8726d3375a2f714b867bb6a09adff85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hero
-  popupPivot: {fileID: 0}
+  popupPivot: {fileID: 336425600363758260}
 --- !u!114 &6357444076963737371
 MonoBehaviour:
   m_ObjectHideFlags: 0
