@@ -15,6 +15,18 @@ public class WaveSystem : MonoBehaviour
 
     private int currentWaveIndex = -1;
 
+    private void OnEnable()
+    {
+        // 이벤트 구독
+        enemySpawner.OnEnemyDestroyed += TryStartNextWave;
+    }
+
+    private void OnDisable()
+    {
+        // 이벤트 구독 해제
+        enemySpawner.OnEnemyDestroyed -= TryStartNextWave;
+    }
+
     public void TryStartNextWave()
     {
         // 현재 웨이브 적(일반+보스) 스폰이 완료되었고 && 모든 적을 처치하였고 && 웨이브가 남아있으면 다음 웨이브 시작

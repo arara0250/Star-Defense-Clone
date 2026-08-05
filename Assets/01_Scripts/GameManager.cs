@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 // 전역 참조용 간단한 싱글톤 GameManager
@@ -7,7 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("참조 연결")]
-    [SerializeField] private PlayerHP playerHP;
+    [SerializeField] private PlayerHP   playerHP;
+    [SerializeField] private WaveSystem waveSystem;
     
     // 외부 참조용 프로퍼티
     public PlayerHP PlayerHP => playerHP;
@@ -22,5 +22,11 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        // 게임 시작 -> 첫 번째 웨이브 시작
+        waveSystem.TryStartNextWave();
     }
 }

@@ -1441,6 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerHP: {fileID: 199521490}
+  waveSystem: {fileID: 662504042}
 --- !u!4 &422200452
 Transform:
   m_ObjectHideFlags: 0
@@ -2928,9 +2929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c29a6a47aad924080405db01608b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyPrefab: {fileID: 2613815933366408034, guid: 52a01b20ff3a3f848b164b2e80dc0372, type: 3}
   enemyHpBarPrefab: {fileID: 2949680090121272546, guid: fcb61f9a166b76941bb9b6d40d83172e, type: 3}
-  spawnTime: 0.5
+  spawnDuration: 0.5
   hpBarParent: {fileID: 1508291878}
   wayPoints:
   - {fileID: 231390578}
@@ -4270,10 +4270,11 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 2010880373}
   - {fileID: 1640731933}
-  - {fileID: 1367423043}
-  - {fileID: 1872442801}
-  - {fileID: 264387013}
   - {fileID: 199521489}
   - {fileID: 474068171}
   - {fileID: 1714437381}
   - {fileID: 422200452}
+  - {fileID: 1367423043}
+  - {fileID: 1872442801}
+  - {fileID: 264387013}
+  - {fileID: 662504043}
