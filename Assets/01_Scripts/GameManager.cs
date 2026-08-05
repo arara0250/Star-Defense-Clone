@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerGold playerGold;
     [SerializeField] private WaveSystem waveSystem;
     [SerializeField] private GameObject retryButton;
+    [SerializeField] private GameObject victoryText;
 
     // 외부 참조용 프로퍼티
     public PlayerHP     PlayerHP => playerHP;
@@ -18,14 +19,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);    // 중복 생성 방지
-            return;
-        }
-
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     private void OnEnable()
@@ -61,7 +55,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Victory");
 
-        // TODO: 승리 UI 표시
+        retryButton.SetActive(true);
+        victoryText.SetActive(true);
 
         Time.timeScale = 0f;   // 게임 진행 전부 일시정지
     }
@@ -70,6 +65,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("GameScene");
     }
 }
