@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    // 현재 블록의 영웅 소환 여부를 확인하는 프로퍼티
-    public bool IsSpawnHero { set; get; }
+    [SerializeField] private Transform popupPivot;      // "소환" 팝업 UI 가 표시될 위치
 
-    private void Awake()
-    {
-        IsSpawnHero = false;    // 초기 세팅 = 소환 X
-    }
+    // 외부 참조용 프로퍼티
+    public Transform PopupPivot => popupPivot;
+
+    // 현재 블록의 영웅 소환 여부를 확인하기 위함 (없으면 null)
+    public Hero Hero { get; set; }
 }
