@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class ObjectDetector : MonoBehaviour
@@ -26,8 +27,11 @@ public class ObjectDetector : MonoBehaviour
         if (!context.ReadValueAsButton())
             return;
 
+        // 지금 클릭한 위치가 UI(팝업 버튼 등) 위라면, 아래의 블록 클릭 로직은 실행하지 않음
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         // raycast 를 통해 클릭(터치)한 블록이 타워 설치 가능 블록이면 영웅 소환
-        // TODO : 중복 체크 및 소환 재화 소모
         Ray ray = mainCamera.ScreenPointToRay(screenPoint);
 
         if ( Physics.Raycast(ray, out var hit, Mathf.Infinity) )
