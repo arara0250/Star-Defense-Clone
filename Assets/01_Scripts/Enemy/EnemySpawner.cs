@@ -89,7 +89,7 @@ public class EnemySpawner : MonoBehaviour
     // EnemySpawner 에서 enemyList 를 관리하기 때문에, 적의 사망 처리도 EnemySpawner 에서 담당
     public void DestroyEnemy(Enemy enemy, int goldReward)
     {
-        playerGold.CurrentGold += goldReward;   // 적 처치 골드 획득
+        playerGold.EarnGold(goldReward);   // 적 처치 골드 획득
 
         enemyList.Remove(enemy);        // 리스트에서 삭제
         Destroy(enemy.gameObject);      // 오브젝트도 삭제

@@ -29,7 +29,7 @@ public class HeroSpawner : MonoBehaviour
         clone.GetComponent<HeroAttack>().Setup(enemySpawner);
 
         // 영웅 소환 성공 처리
-        playerGold.CurrentGold -= heroSpawnGold;
+        playerGold.SpendGold(heroSpawnGold);
         block.IsSpawnHero = true;
     }
 }
