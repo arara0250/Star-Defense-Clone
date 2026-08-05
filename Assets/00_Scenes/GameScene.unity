@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 199521489}
   - component: {fileID: 199521488}
   - component: {fileID: 199521490}
+  - component: {fileID: 199521491}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -763,6 +764,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
   maxHP: 100
   currentHP: 0
+--- !u!114 &199521491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199521487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7209f4e6c122ad45be99d1c591ab55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerGold
+  currentGold: 150
 --- !u!1001 &231390577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1652,6 +1666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerHP: {fileID: 199521490}
+  playerGold: {fileID: 199521491}
   waveSystem: {fileID: 662504042}
 --- !u!4 &422200452
 Transform:
