@@ -77,6 +77,6 @@ public class Enemy : MonoBehaviour
     // 적의 사망 처리를 담당하는 EnemySpawner 에게 필요한 정보를 전달하는 메소드
     public void OnDie()
     {
-        _enemySpawner.DestroyEnemy(this);
+        _enemySpawner.DestroyEnemy(this, goldReward);
     }
 }

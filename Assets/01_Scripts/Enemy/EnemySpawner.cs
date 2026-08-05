@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform      hpBarParent;        // 적 체력바 UI 오브젝트들의 부모
     [SerializeField] private Transform[]    wayPoints;          // Waypoint 오브젝트 Inspector 뷰에서 추가
 
+    private PlayerGold  playerGold;                 // 플레이어 골드 정보 참조
     private Wave        currentWave;                // 현재 진행중인 웨이브
     private bool        isSpawnFinished = true;     // 현재 진행중인 웨이브의 적(일반+보스)이 모두 스폰되었는지
                                                     // 초기값 : true => 스폰 대기 상태
@@ -30,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         enemyList = new List<Enemy>();
+        playerGold = GameManager.Instance.PlayerGold;
     }
 
     public void StartWave(Wave wave)
@@ -85,8 +87,10 @@ public class EnemySpawner : MonoBehaviour
     }
 
     // EnemySpawner 에서 enemyList 를 관리하기 때문에, 적의 사망 처리도 EnemySpawner 에서 담당
-    public void DestroyEnemy(Enemy enemy)
+    public void DestroyEnemy(Enemy enemy, int goldReward)
     {
+        playerGold.CurrentGold += goldReward;   // 적 처치 골드 획득
+
         enemyList.Remove(enemy);        // 리스트에서 삭제
         Destroy(enemy.gameObject);      // 오브젝트도 삭제
 

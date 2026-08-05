@@ -6,11 +6,13 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("참조 연결")]
-    [SerializeField] private PlayerHP   playerHP;
+    [SerializeField] private PlayerHP playerHP;
+    [SerializeField] private PlayerGold playerGold;
     [SerializeField] private WaveSystem waveSystem;
     
     // 외부 참조용 프로퍼티
-    public PlayerHP PlayerHP => playerHP;
+    public PlayerHP     PlayerHP => playerHP;
+    public PlayerGold   PlayerGold => playerGold;
     
     private void Awake()
     {
