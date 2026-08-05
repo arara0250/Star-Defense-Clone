@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 전역 참조용 싱글톤 GameManager (간단ver)
 public class GameManager : MonoBehaviour
@@ -9,7 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerHP playerHP;
     [SerializeField] private PlayerGold playerGold;
     [SerializeField] private WaveSystem waveSystem;
-    
+    [SerializeField] private GameObject retryButton;
+
     // 외부 참조용 프로퍼티
     public PlayerHP     PlayerHP => playerHP;
     public PlayerGold   PlayerGold => playerGold;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
 
-        // TODO: 게임오버 UI 표시
+        retryButton.SetActive(true);
 
         Time.timeScale = 0f;   // 게임 진행(적 스폰, 이동, 공격 등) 을 전부 일시정지
     }
@@ -62,5 +64,12 @@ public class GameManager : MonoBehaviour
         // TODO: 승리 UI 표시
 
         Time.timeScale = 0f;   // 게임 진행 전부 일시정지
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
